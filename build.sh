@@ -23,8 +23,11 @@ else
 fi
 
 echo "PhantomJS path: $(which phantomjs)"
+
 echo "PhantomJS version: $(phantomjs --version)"
-echo "PhantomJS dependencies: $(ldd phantomjs)"
+
+echo "PhantomJS dependencies: $(phantomjs | xargs ldd)"
+
 echo "PhantomJS installed successfully"
 
 set +e
