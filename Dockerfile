@@ -2,6 +2,7 @@
 FROM debian:bookworm AS builder
 
 ENV QT_QPA_PLATFORM=offscreen
+ENV OPENSSL_CONF=/dev/null
 
 ADD . /tmp
 

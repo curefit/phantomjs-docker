@@ -4,7 +4,7 @@ set -x
 set -e
 
 apt update
-apt install -y curl
+apt install -y curl openssl libfontconfig1
 
 ARCH=$(uname -m)
 echo "Detected architecture: $ARCH"
