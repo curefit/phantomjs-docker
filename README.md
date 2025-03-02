@@ -27,12 +27,12 @@ To use the binary in another Dockerfile:
 ```Dockerfile
 FROM debian
 RUN apt-get update && apt-get install -y libfontconfig
-COPY --from=99designs/phantomjs:2.1.1 /usr/local/bin/phantomjs /usr/local/bin/phantomjs
+COPY --from=ghcr.io/curefit/phantomjs-docker:latest /usr/bin/phantomjs /usr/bin/phantomjs
 ```
 
 ### Building
 
 For a multi-arch build
 ```
-docker buildx build --tag 99designs/phantomjs:2.1.1 --platform linux/amd64,linux/arm64 --push .
+docker buildx build --tag ghcr.io/curefit/phantomjs-docker:latest --platform linux/amd64,linux/arm64 --push .
 ```

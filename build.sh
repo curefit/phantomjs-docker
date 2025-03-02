@@ -26,7 +26,7 @@ echo "PhantomJS path: $(which phantomjs)"
 
 echo "PhantomJS version: $(phantomjs --version)"
 
-echo "PhantomJS dependencies: $(phantomjs | xargs ldd)"
+echo "PhantomJS dependencies: $(which phantomjs | xargs ldd)"
 
 echo "PhantomJS installed successfully"
 
